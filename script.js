@@ -7,6 +7,7 @@ function Book(name,pages,status) {
         throw Error("You Must include new when create new Obj!");
     }
 
+    this.id = crypto.randomUUID();
     this.name = name;
     this.pages = pages;
     this.status = status;
