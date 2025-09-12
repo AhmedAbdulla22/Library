@@ -1,6 +1,6 @@
-const myLibrary = [];
+const myLibrary = [{id:"1234-2324-3fs4-2d54",name:"the book",pages:453,status:false}];
 
-
+// data Model Layer
 function Book(name,pages,status) {
 
     if(!new.target) {
@@ -22,4 +22,11 @@ function addNewBook(name,pages,status) {
     
     //add new book to the library
     myLibrary.push(newBook);
+}
+
+// presentation Layer
+function showBooks() {
+    myLibrary.forEach((book) => {
+        console.log(book);
+    })
 }
