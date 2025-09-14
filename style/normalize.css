@@ -1,0 +1,124 @@
+/* Modern CSS Reset (compact, production-ready) */
+
+/* 1. Box sizing */
+
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* 4. Improve text rendering and layout defaults */
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* 5. Make images and media easier to work with */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form elements */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 7. Remove animations/transitions for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: anywhere;
+}
+
+/* 9. Remove list styles on ul/ol with role=list */
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 10. Anchor defaults */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus-visible {
+  text-decoration: underline;
+}
+
+/* 11. Button normalization */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* 12. Fieldset/legend resets */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+legend {
+  padding: 0;
+}
+
+/* 13. Table normalization */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 14. Headings and typography rhythm */
+:where(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* 15. Form elements defaults */
+textarea {
+  resize: vertical;
+}
+
+/* 16. HR reset */
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid currentColor;
+  opacity: 0.2;
+  margin: 1rem 0;
+}
+
+/* 17. Sup/sub baseline */
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
