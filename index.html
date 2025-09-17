@@ -6,9 +6,6 @@
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-  <div id="pepsi">
-    SS
-  </div>
   <div class="container">
     <div class="header">
       <h1>Hello, book-library!</h1>
@@ -17,9 +14,29 @@
       
       <div class="library-container">
         <div class="book-container">
-          
+          <h2 class="title">title</h2>
+          <div class="book-inforamtion">
+            <p class="author">Author: <span contenteditable="true">anon</span></p>
+            <p>Pages: <span contenteditable="true">15</span> /
+                      <span contenteditable="true">365</span></p>
+          </div>
+          <div class="button-container">
+            <button id="edit-button">Edit</button>
+            <button id="status-button">Complete</button>
+          </div>
+        </div>
+        <div class="book-container">
+          <button class="add-book-button">
+            <svg class="add-book-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg>          
+          </button>
         </div>
       </div>
+      <dialog open class="add-book-dialog">
+        <p>Greetings, one and all!</p>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+      </dialog>
     </div>
   </div>
   <script src="/script/script.js"></script>
