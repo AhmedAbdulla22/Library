@@ -101,4 +101,63 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(0,0,0,.15);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
 }
+
+
+.add-book-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.new-book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #cdcdcd;
+  align-items: center;
+}
+
+.dialog-header h2 {
+  color: #333;
+}
+
+.close-button {
+  font-size: 2.5rem;
+  color: #888;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.form-field-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
