@@ -82,8 +82,6 @@ body {
 }
 
 .book-container:has(.add-book-icon) {
-  display: flex;
-  flex-direction: column;
   padding: 0;
   background-color: transparent;
   border: 3px dashed var(--primary-color);
@@ -92,9 +90,13 @@ body {
   background-color: rgba(0,0,0,0.15);
 }
 
+.add-book-button {
+  display: flex;
+  justify-content: center;
+}
+
 .add-book-icon {
   width: 7rem;
-  justify-self: center;
 }
 
 .add-book-dialog {
@@ -113,7 +115,7 @@ body {
 
 .add-book-dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
 }
 
 .new-book-form {

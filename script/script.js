@@ -11,10 +11,11 @@ function Book(name,pages,status) {
     this.name = name;
     this.pages = pages;
     this.status = status;
-    this.info = function () {
-        let info = this.name + ', ' + this.pages + ' pages' + ', ' + (this.status ? "completed":"not read yet"); 
-        return info;
-    }
+}
+
+Book.prototype.info = function () {
+    let info = this.name + ', ' + this.pages + ' pages' + ', ' + (this.status ? "completed":"not read yet"); 
+    return info;
 }
 
 function addNewBook(name,pages,status) {
@@ -30,3 +31,19 @@ function showBooks() {
         console.log(book);
     })
 }
+
+
+// -- add new book dialog --
+const dialog = document.querySelector('#add-book-dialog');
+const showDialogBtn = document.querySelector('#show-dialog-button');
+const closeButtons = document.querySelectorAll('.close-button, .btn-secondary');
+
+showDialogBtn.addEventListener("click",(e) => {    
+        dialog.showModal();
+})
+
+closeButtons.forEach((btn) => {
+    btn.addEventListener('click',(e) => {
+        dialog.close();
+    })
+})
