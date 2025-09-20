@@ -43,7 +43,7 @@ body {
 .library-container {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit,clamp(200px, 20vw, 350px));
+  grid-template-columns: repeat(auto-fit,clamp(300px, 20vw, 350px));
   grid-auto-rows: minmax(150px,300px);
   gap: 2rem;
   height: 100%;
@@ -66,18 +66,18 @@ body {
 }
 
 .book-container button:hover {
-  background-color: rgba(255,255,255,0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-#status-button {
+.status-button {
   background-color: rgb(181, 13, 13);
 }
-#edit-button {
+.edit-button {
   background-color: rgb(255, 255, 255);
   color: black;
 }
 
-#status-button .completed {
+.completed {
   background-color: rgb(11, 150, 11);
 }
 
@@ -97,20 +97,12 @@ body {
   font-weight: normal;
 }
 
-.book-container:has(.add-book-icon) {
-  padding: 0;
-  background-color: transparent;
-  border: 3px dashed var(--primary-color);
-}
-.book-container:has(.add-book-icon):hover {
-  background-color: rgba(0,0,0,0.15);
-}
 
 .book-container .button-container {
   padding: 1rem;
 }
 
-.book-container #delete-button {
+.book-container .delete-button {
   position: absolute;
   border: none;
   color: red;
@@ -127,7 +119,7 @@ body {
   width: 7rem;
 }
 
-.add-book-dialog {
+.add-book-dialog , .modify-book-dialog {
   position: absolute;
   top: 50%;
   left: 50%;
