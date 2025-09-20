@@ -27,17 +27,30 @@ body {
   align-content: center;
 }
 
+.header .add-book-button {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  background-color: #fff;
+  color: #111;
+  padding: .5rem;
+}
+
+.header .add-book-button:hover {
+  transform: scale(.95);
+}
+
 .library-container {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit,clamp(200px, 20vw, 350px));
-  grid-auto-rows: minmax(150px,200px);
+  grid-auto-rows: minmax(150px,300px);
   gap: 2rem;
   height: 100%;
 }
 
 .book-container {
-  padding: 1rem;
+  position: relative;
   background-color: var(--primary-color);
   border-radius: 1rem;
   display: flex;
@@ -68,17 +81,20 @@ body {
   background-color: rgb(11, 150, 11);
 }
 
+.book-container .book-inforamtion {
+  padding: 1rem;
+}
+
+.book-container .book-header {
+  padding: 1rem;
+  width: 20ch;
+}
+
 .book-container .book-inforamtion p {
   font-weight: 600;
 }
 .book-container .book-inforamtion span {
   font-weight: normal;
-}
-
-.book-container .add-book-button {
-  height: 100%;
-  width: 100%;
-  border: none;
 }
 
 .book-container:has(.add-book-icon) {
@@ -88,6 +104,18 @@ body {
 }
 .book-container:has(.add-book-icon):hover {
   background-color: rgba(0,0,0,0.15);
+}
+
+.book-container .button-container {
+  padding: 1rem;
+}
+
+.book-container #delete-button {
+  position: absolute;
+  border: none;
+  color: red;
+  top: .4rem;
+  right: .4rem;
 }
 
 .add-book-button {

@@ -1,4 +1,21 @@
-const myLibrary = [{id:"1234-2324-3fs4-2d54",name:"the book",pages:453,status:false}];
+const myLibrary = [
+    {
+    id:"1234-2324-3fs4-2d54",
+    name:"the book of the narnia",
+    author: 'hmm',
+    total_pages:453,
+    pages_read: 53,
+    status:false
+    },
+    {
+    id:"1234-2324-33s4-3d54",
+    name:"the Cook",
+    author: 'voldmort',
+    total_pages:413,
+    pages_read: 5,
+    status:true
+    },
+];
 
 // data Model Layer
 function Book(name,pages,status) {
@@ -47,3 +64,32 @@ closeButtons.forEach((btn) => {
         dialog.close();
     })
 })
+
+// -- show all books --
+const libraryContainer = document.querySelector('.library-container');
+
+function showBooks() {
+    myLibrary.forEach((book) => {
+        const newBookCard = document.createElement("div");
+        newBookCard.classList.add("book-container");
+        newBookCard.innerHTML = `
+        <button id="delete-button" class="btn">X</button>
+        <div class="book-header">
+            <h2 class="title">${book.name}</h2>        
+        </div>
+        <div class="book-inforamtion">
+            <p class="author">Author: <span>${book.author}</span></p>
+            <p>Pages: <span contenteditable="true">${book.pages_read}</span> /
+                      <span contenteditable="true">${book.total_pages}</span></p>
+          </div>
+          <div class="button-container">
+            <button id="edit-button" class="btn">Edit</button>
+            <button id="status-button" class="btn">Complete</button>
+          </div>`;
+        libraryContainer.appendChild(newBookCard);
+    })
+}
+
+showBooks();
+
+// -- add books --
