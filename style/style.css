@@ -1,4 +1,4 @@
-@import './style/normalize.css';
+@import './normalize.css';
 
 :root {
   --primary-color: black;
