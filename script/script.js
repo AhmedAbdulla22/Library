@@ -19,6 +19,14 @@ Book.prototype.toggleStatus = function () {
     this.status = !this.status;
 };
 
+//add sample books
+const book1 = new Book("The Pragmatic Programmer", "Andrew Hunt", 352, 120, true);
+const book2 = new Book("Clean Code", "Robert C. Martin", 464, 80, false);
+const book3 = new Book("You Don’t Know JS", "Kyle Simpson", 278, 0, false);
+const book4 = new Book("Atomic Habits", "James Clear", 320, 100, true);
+
+myLibrary.push(book1, book2, book3, book4);
+
 // -- show all books --
 const libraryContainer = document.querySelector('.library-container');
 
