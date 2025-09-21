@@ -1,22 +1,4 @@
-let myLibrary = JSON.parse(localStorage.getItem("books")) ||
-[
-    {
-    id:"1234-2324-3fs4-2d54",
-    title:"the book of the narnia",
-    author: 'hmm',
-    total_pages:453,
-    pages_read: 53,
-    status:false
-    },
-    {
-    id:"1234-2324-33s4-3dfs",
-    title:"the Cook",
-    author: 'voldmort',
-    total_pages:413,
-    pages_read: 5,
-    status:true
-    },
-];
+let myLibrary = JSON.parse(localStorage.getItem("books")) || [];
 
 // data Model Layer
 function Book(title,author,total_pages,pages_read,status) {
@@ -33,10 +15,9 @@ function Book(title,author,total_pages,pages_read,status) {
     this.status = status;
 }
 
-Book.prototype.info = function () {
-    let info = this.name + ', ' + this.pages + ' pages' + ', ' + (this.status ? "completed":"not read yet"); 
-    return info;
-}
+Book.prototype.toggleStatus = function () {
+    this.status = !this.status;
+};
 
 // -- show all books --
 const libraryContainer = document.querySelector('.library-container');
@@ -271,7 +252,8 @@ function updateLibrary() {
 function changeStatus(bookId) {
     myLibrary.forEach((book) => {
         if (book.id === bookId) {
-            book.status = !book.status;
+            console.log(book);
+            book.toggleStatus();
         }
     })
 
